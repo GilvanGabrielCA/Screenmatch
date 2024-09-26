@@ -5,12 +5,11 @@ import br.com.alura.screenmatch.modelos.Filme;
 import br.com.alura.screenmatch.modelos.Serie;
 
 import java.util.ArrayList;
+import java.util.Objects;
 
 public class Principal {
     public  static void main(String[] args){
-        Filme meuFilme = new Filme();
-        meuFilme.setNome("O poderoso chefão");
-        meuFilme.setAnoDeLancamento(1970);
+        Filme meuFilme = new Filme("O poderoso chefão", 1970);
         meuFilme.setDuracaoEmMinutos(180);
         System.out.println("Duração do filme: " + meuFilme.getDuracaoEmMinutos());
 
@@ -24,9 +23,7 @@ public class Principal {
         System.out.println("Total de avaliações: " + meuFilme.getTotalDeAvaliacoes());
         System.out.println(meuFilme.pegaMedia( ));
 
-        Serie lost = new Serie();
-        lost.setNome("Lost");
-        lost.setAnoDeLancamento(2000);
+        Serie lost = new Serie("Lost", 2000);
         lost.setTemporadas(10);
         lost.setEpisodiosPorTemporada(10);
         lost.setMinutosPorEpisodio(50);
@@ -35,9 +32,7 @@ public class Principal {
 
         System.out.println();
 
-        Filme outroFilme = new Filme();
-        outroFilme.setNome("Avatar 2");
-        outroFilme.setAnoDeLancamento(2023);
+        Filme outroFilme = new Filme("Avatar 2", 2023);
         outroFilme.setDuracaoEmMinutos(200);
         System.out.println("Duração do filme: " + meuFilme.getDuracaoEmMinutos());
 
@@ -60,10 +55,8 @@ public class Principal {
         episodio.setTotalVisualizacoes(300);
         filtro.filtra(episodio);
 
-        var filmeDoGilvan = new Filme();
-        filmeDoGilvan.setNome("Ultimato");
+        var filmeDoGilvan = new Filme("Ultimado", 2003);
         filmeDoGilvan.setDuracaoEmMinutos(200);
-        filmeDoGilvan.setAnoDeLancamento(2003);
         filmeDoGilvan.avalia(10);
 
         ArrayList<Filme> listaDeFilmes = new ArrayList<>();
